@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Gradient : MonoBehaviour {
 	public Color32[] colors;
-	SpriteRenderer sprite;
+	Image sprite;
 	public float maxTime;
 	float time;
 	void Start(){
-		sprite= GetComponent<SpriteRenderer>();
+		sprite= GetComponent<Image>();
 		Repeat();
 	}
 	void Repeat(){

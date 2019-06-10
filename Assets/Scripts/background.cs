@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class background : MonoBehaviour {
 	public float speed;
@@ -10,14 +12,14 @@ public class background : MonoBehaviour {
 	
 	public float speedCoef;
 	public Sprite[] sprites;
-	SpriteRenderer spriteRender;
+	Image spriteRender;
 	Rigidbody2D rb;
 
 	void Start () {
 		
 		rb=GetComponent<Rigidbody2D>();
 		if(randSprite)
-			spriteRender=GetComponent<SpriteRenderer>();
+			spriteRender=GetComponent<Image>();
 	}
 	
 	// Update is called once per frame
