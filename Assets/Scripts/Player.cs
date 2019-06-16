@@ -1,30 +1,42 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
 
 	public float jumpHeight;
-	Rigidbody2D rb;
+	[HideInInspector]
+	public Rigidbody2D rb;
 	bool isGrounded;
+	[HideInInspector]
+	public float score; 
+	[SerializeField]
+	background bg;
+	[HideInInspector]
+	public bool lose;
+	[HideInInspector]
+	public BoxCollider2D collider;
 	void Start () {
 		rb=GetComponent<Rigidbody2D>();
+		collider=GetComponent<BoxCollider2D>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+
 	public void Jump(){
-		if(isGrounded)
+		if(isGrounded&&!lose)
 		rb.velocity= new Vector2(rb.velocity.x,jumpHeight);
 	}
-	void OnCollisionStay2D(Collision2D col) {
-		if(col.gameObject.tag=="Ground")
+	void OnTriggerStay2D(Collider2D col) {
+		if(col.gameObject.tag=="GroundCol")
 			 isGrounded=true;
+		if(col.gameObject.tag=="Enemy")
+			lose=true;
 	}
-	void OnCollisionExit2D(Collision2D col) {
-		if(col.gameObject.tag=="Ground")
+	void OnTriggerExit2D(Collider2D col) {
+		if(col.gameObject.tag=="GroundCol")
 			 isGrounded=false;
 	}
+
+
 }

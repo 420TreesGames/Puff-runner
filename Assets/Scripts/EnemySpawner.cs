@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
-
-	public GameObject[] prefabs;
-	public Vector2 spawnPosition;
-	public List <GameObject> enemyList;
+	[SerializeField]
+	GameObject[] prefabs;
+	[SerializeField]
+	Vector2 spawnPosition;
+	[SerializeField]
+	List <GameObject> enemyList;
 	[Header("Random")]
-
-	public float minRand;
-	public float maxRand;
+	[SerializeField]
+	float minRand;
+	[SerializeField]
+	float maxRand;
 
 	void Start () {
 		Repeat();

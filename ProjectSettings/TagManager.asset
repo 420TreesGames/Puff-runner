@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Speed
+  - GroundCol
+  - Enemy
   layers:
   - Default
   - TransparentFX

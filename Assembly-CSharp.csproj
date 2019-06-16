@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Gradient.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\UIMain.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/AlexMetan/Documents/Puff runner/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
