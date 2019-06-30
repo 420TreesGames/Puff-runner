@@ -37,6 +37,7 @@ public class EnemySpawner : MonoBehaviour {
 	IEnumerator Spawn(){
 		int rand= Random.Range(0,prefabs.Length);
 		GameObject enemy=	Instantiate(prefabs[rand], spawnPosition,Quaternion.identity,transform);
+		if(enemy.tag=="Enemy")
 		enemyList.Add(enemy);
 		yield return new WaitForSeconds(Random.Range(minRand,maxRand));
 		Repeat();

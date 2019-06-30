@@ -20,15 +20,21 @@ public class UIMain : MonoBehaviour {
 	[SerializeField]
 	Text gameOver_bestScore;
 	float bestScore;
+	[SerializeField]
+	Text weedText;
 
 	void Update () {
 		Score();
 		if(player.lose)
 		GameOver();
+		Weed();
 	}
 	void Score(){
 		score+=scoreCoef;
 		scoreTxt.text="Score: "+Mathf.Ceil(score).ToString();
+	}
+	void Weed(){
+		weedText.text=player.weed.ToString();
 	}
 	void GameOver(){
 		bestScore=PlayerPrefs.GetFloat("bestScore");
@@ -39,12 +45,10 @@ public class UIMain : MonoBehaviour {
 		gameOver_score.text="Score : "+Mathf.Ceil(score).ToString();		
 		gameOver_bestScore.text="Best: "+Mathf.Ceil(bestScore).ToString();
 		scoreCoef=0;
-		player.collider.isTrigger=true;
+		player.GetComponent<CapsuleCollider2D>().isTrigger=true;
 		if(player.transform.position.y<-10)
 		player.rb.constraints=RigidbodyConstraints2D.FreezeAll;
 
 	}
-	public void Restart(){
-		SceneManager.LoadScene(0);
-	}
+	
 }

@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
-
+	
 	public float jumpHeight;
 	[HideInInspector]
 	public Rigidbody2D rb;
@@ -15,10 +13,11 @@ public class Player : MonoBehaviour {
 	[HideInInspector]
 	public bool lose;
 	[HideInInspector]
-	public BoxCollider2D collider;
+	public int weed;
+	[SerializeField] int weedValue;
 	void Start () {
 		rb=GetComponent<Rigidbody2D>();
-		collider=GetComponent<BoxCollider2D>();
+		weed=PlayerPrefs.GetInt("weedCount");
 	}
 	
 	// Update is called once per frame
@@ -28,10 +27,22 @@ public class Player : MonoBehaviour {
 		rb.velocity= new Vector2(rb.velocity.x,jumpHeight);
 	}
 	void OnTriggerStay2D(Collider2D col) {
+		
 		if(col.gameObject.tag=="GroundCol")
 			 isGrounded=true;
 		if(col.gameObject.tag=="Enemy")
 			lose=true;
+		
+	}
+	void OnTriggerEnter2D(Collider2D col) {
+		 if (col.GetType() == typeof(BoxCollider2D)){
+		if(col.gameObject.tag=="Weed"){
+		Destroy(col.gameObject);
+		weed++;	
+		PlayerPrefs.SetInt("weedCount",weed);
+		
+			}
+		}
 	}
 	void OnTriggerExit2D(Collider2D col) {
 		if(col.gameObject.tag=="GroundCol")

@@ -2,6 +2,12 @@
 using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
+	[SerializeField] enum EnemyOrWeed
+	{
+		enemy,weed
+	}
+	[SerializeField]
+	EnemyOrWeed enemyOrWeed;
 	[SerializeField] Sprite[] sprite;
 	Image image;
 	background groundSpeed;
@@ -12,6 +18,7 @@ public class Enemy : MonoBehaviour {
 		image=GetComponent<Image>();
 		groundSpeed=GameObject.FindGameObjectWithTag("Ground").GetComponent<background>();
 		rb=GetComponent<Rigidbody2D>();
+		if(enemyOrWeed==EnemyOrWeed.enemy)
 		RandomSprite();
 
 	}

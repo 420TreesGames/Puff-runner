@@ -5,6 +5,11 @@ TextureImporter:
     21300000: coin
     21300002: enemy1
     21300004: enemy2
+    21300006: Play
+    21300008: Stuff_1
+    21300010: record
+    21300012: settings
+    21300014: weed
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -106,7 +111,7 @@ TextureImporter:
         width: 317
         height: 318
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +131,7 @@ TextureImporter:
         width: 392
         height: 375
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 12, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,13 +151,113 @@ TextureImporter:
         width: 414
         height: 423
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 76, y: 0, z: 33, w: 37}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 1b8b3c40efc007b4fb0af55f58cd8962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 514
+        width: 408
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d07a8eb9da9c5d438092367002fd7b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stuff_1
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 447
+        width: 59
+        height: 659
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13e1c422d9bdff42830bf91f1995892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: record
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 472
+        width: 381
+        height: 414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865b7b77d2ab8984084b541db34ca6fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 405
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fce28ac3850f0343b8ceab19299cdb3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weed
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1089
+        width: 410
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27588455c71cf9b4c87ac75943c6f142
       vertices: []
       indices: 
       edges: []
